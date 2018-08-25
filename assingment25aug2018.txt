@@ -1,0 +1,141 @@
+sol 1->
+
+class Demo{
+
+	static{
+		//static runs only by making object
+		System.out.println("Static");
+	}
+
+}
+
+public class Test{
+	public static void main(String[] args){
+		Demo d=new Demo();
+	}
+}
+
+//==============================================================================================================
+
+sol 2->
+
+class Animal
+{
+	public void breed()
+	{
+		System.out.println("german");
+	}
+	public void colour()
+	{
+		System.out.println("black");
+	}
+	public void speak()
+	{
+		System.out.println("----------");
+	}
+}
+class Cat extends Animal
+{
+	public void speak()
+	{
+		System.out.println("meoooooooowwwwww");
+	}
+}
+class Dog extends Animal
+{
+	public void speak()
+	{
+		System.out.println("bow-bow");
+	}
+}
+public class SecondQuestion
+{
+	public static void main(String[] args)
+	{
+		Cat a=new Cat();
+		Dog b=new Dog();
+		a.breed();
+		a.colour();
+		a.speak();
+		b.breed();
+		b.colour();
+		b.speak();
+	}
+}
+
+//=====================================================
+sol 3->
+
+class test
+{
+	public void print()
+	{
+		System.out.println("1st function called");
+	}
+	public void print(int a)
+	{
+		System.out.println("2nd function called int a= "+a );
+	}
+	public void print(float a)
+	{
+		System.out.println("1st function called float a = "+a );
+	}
+}
+public class ThirdQuestion
+{
+	public static void main(String[] args)
+	{
+		test obj =new test();
+		obj.print();
+		obj.print(22);
+		obj.print(9.243f);
+	}
+}
+
+//==========================================================================================
+
+sol 4->
+
+abstract class vehicle
+{
+  abstract public void start();
+  public void stop()
+  {
+	  System.out.println("vehicle stopped");
+  }
+	
+}
+class twoWheeler extends vehicle
+{
+	public void start()
+	{
+		System.out.println("2 wheeler started");
+	}
+	public void stop()
+	{
+		System.out.println("2 wheeler stopped");
+	}
+}
+class fourWheeler extends vehicle
+{
+	public void start()
+	{
+		System.out.println("4 wheeler started");
+	}
+	public void stop()
+	{
+		System.out.println("4 wheeler stopped");
+	}
+}
+public class FourthQuestion
+{
+	public static void main(String[] args)
+	{
+		vehicle obj1 = new twoWheeler();
+		vehicle obj2 = new fourWheeler();
+		obj1.start();
+		obj1.stop();
+		obj2.start();
+		obj2.stop();
+	}
+}
