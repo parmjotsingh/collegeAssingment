@@ -1,0 +1,106 @@
+sol 1->
+import java.util.Scanner;
+
+class Rectangle{
+	private int length;
+	private int breadth;
+	int calculateArea(){
+		return getLength()*getBreadth();
+	}
+	void setLength(int x){
+		length=x;
+	}
+	void setBreadth(int x){
+		breadth=x;
+	}	
+	int getLength(){
+		return length;
+	}
+	int getBreadth(){
+		return breadth;
+	}
+	public static void main(String [] args){
+		Scanner scan=new Scanner(System.in);
+		Rectangle r=new Rectangle();
+		System.out.println("ENTER LENGTH");
+		r.setLength(scan.nextInt());
+		System.out.println("ENTER BREADTH");		
+		r.setBreadth(scan.nextInt());
+		System.out.println("AREA = "+r.calculateArea());
+	}
+}
+//=======================================================
+sol 2->
+class Complex{
+	private int real;
+	private int imaginary;
+	public void setRealImaginary(int real,int imaginary){
+		this.real=real;
+		this.imaginary=imaginary;
+	}
+	public void display(){System.out.println(real+"+"+imaginary+"i");}	
+}
+
+public class QuestionTwo{
+	public  static void main(String[] args){
+		Complex c=new Complex();
+		c.setRealImaginary(2,5);
+		c.display();
+			
+	}
+}
+//=============================================================
+sol 3->
+import java.util.*;
+public class QuestionThree{
+	public static void main(String[] args){
+		Scanner scan=new Scanner(System.in);
+		int[] a=new int[10];
+		for(int i=0;i<10;i++){
+			System.out.print("Enter a element");
+			a[i]=scan.nextInt();
+		}
+		Arrays.sort(a);
+		System.out.println("Second largest element = "+a[8]);
+	}
+}
+//============================================================
+sol 4->
+public class StaticBlock{
+
+	static{
+		System.out.println("static block");
+	}	
+
+	public static void main(String[] args){}
+}
+//===========================================================
+sol 5->
+
+import java.util.*;
+public class Waveform{
+	public static void main(String[] args){
+		Scanner scan=new Scanner(System.in);
+		int[] a=new int[10];
+		for(int i=0;i<10;i++){
+			a[i]=scan.nextInt();
+		}
+		int[] b=new int[10];
+		Arrays.sort(a);
+		int o=1,e=0;
+		for(int i=0;i<10;i++){
+			if((a[i]%2)==0){
+				b[e]=a[i];
+				e+=2;
+			}
+			else{
+			b[o]=a[i];
+			o+=2;	
+			}
+		}
+		for(int i=0;i<10;i++){
+			System.out.print(b[i]+" ");
+		}	
+	}
+}
+/==============================================================
