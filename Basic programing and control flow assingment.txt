@@ -1,0 +1,130 @@
+sol 1->
+class real{
+	protected static void add(int n,int m){
+		System.out.println("SUM = "+ (n+m));
+	}
+}
+
+public class Add{
+	public static void main(String[] args){
+		real.add(10 ,20 );
+	}
+}
+//====================================================
+sol 2->
+import java.util.*;
+
+class check{
+	protected boolean check(short x){
+		if(x%400==0){
+			return true;
+		}else if(((x%100)!=0)&&((x%4)==0)){
+				return true;
+			}
+	return false;
+	}
+}
+
+public class Leap{
+	public static void main(String[] args){
+		check c=new check();
+		Scanner scan=new Scanner(System.in);
+		if(c.check(scan.nextShort())){
+			System.out.println("LEAP year");
+		}
+		else{
+			System.out.println("not a LEAP year");
+		}	
+	}
+}
+//==================================================================
+sol 3->
+public class Pattern{
+	public static void main(String[] args){
+		for(int i=0;i<4;i++){
+			for(int j=0;j<=i;j++){
+				System.out.print("*");
+			}
+		System.out.println();
+		}
+	}
+}
+//=================================================================
+sol 4->
+public class Greater{
+	public static void main(String[] args){
+		int a=10;
+		int b=8;
+		int c=9;
+		if(a>b){
+			if(a>c){System.out.println("a greatest");}
+			else{System.out.println("c greatest");}
+		}	
+		else{
+			if(b>c){System.out.println("b greatest");}
+			else{System.out.println("c greatest");}
+		}
+	}
+}
+
+//=================================================================
+sol 5->
+import java.util.Scanner;
+public class Palindrome{
+	public static void main(String[] args){
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter a number");
+		int n= scan.nextInt();
+		int temp=n;
+		int s=0,r;
+		while(n>0){
+			r=n%10;
+			s=s*10+r;
+			n=n/10;
+		}
+		if(s==temp){System.out.println("PALINDROME");}
+		else{System.out.println("NOT A PALINDROME");}
+	}
+}
+//====================================================================
+sol 6->
+import java.util.Scanner;
+public class Prime{    
+	public static void main(String args[]){    
+		int i,m=0,flag=0;      
+  		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter a number");
+		int n= scan.nextInt();   
+  		m=n/2;      
+  		if(n==0||n==1){  
+  		 System.out.println(n+" is not prime number");      
+  		}else{  
+  		 for(i=2;i<=m;i++){      
+    			if(n%i==0){      
+     				System.out.println(n+" is not prime number");      
+     				flag=1;      
+     				break;      
+    				}      
+   			}      
+   			if(flag==0)  { System.out.println(n+" is prime number"); }  
+  		}	
+	}    
+}   
+//===========================================================================
+sol 7->
+
+import java.util.Scanner;
+public class Reverse{
+	public static void main(String[] args){
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter a number");
+		int n= scan.nextInt();
+		int s=0,r;
+		while(n>0){
+			r=n%10;
+			s=s*10+r;
+			n=n/10;
+		}
+		System.out.println("Reverse = "+s);
+	}
+}

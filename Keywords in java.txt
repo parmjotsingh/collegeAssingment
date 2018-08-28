@@ -1,0 +1,44 @@
+sol1 ->
+class parent{
+	protected static void fun(){
+		System.out.println("Parent class");
+	}
+}
+
+public class QuestionOne extends parent{
+	public static void main(String[] args){
+		parent.fun();
+		System.out.println("MAIN METHOD");
+	}
+}
+//============================================================
+
+sol 2->
+public class QuestionTwo{
+
+	QuestionTwo(){System.out.println("default constructor");}	
+	QuestionTwo(int x){
+		this();
+		System.out.println("parameterized constructor");
+	}
+	public static void main(String[] args){
+		QuestionTwo n=new QuestionTwo(10);
+	}
+}
+//=============================================================
+
+sol 3->
+
+final class fun{//this class is not extendable
+	int a;
+	void f{
+		System.out.println("class fun");
+	}
+}
+
+public class QuestionThree{
+	public static void main(String[] args){
+		System.out.println("Main method");
+	}
+}
+//==============================================================
